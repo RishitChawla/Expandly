@@ -8,7 +8,7 @@ export function AnimatedBackground() {
   const { theme } = useTheme()
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current!;
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d")
