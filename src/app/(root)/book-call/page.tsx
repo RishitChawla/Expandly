@@ -129,7 +129,7 @@ export default function BookCallPage() {
                       width={50}
                       height={50}
                       alt={`tryandhauls portrait`}
-                      src={`/images/testimonials/tryandhauls.png`}
+                      src={`/images/testimonials/TryAndHauls.png`}
                       className="rounded-full object-cover"
                     />
                   </a>
