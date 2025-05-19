@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/components/ui/use-toast"
+import { toast } from "sonner";
 import { format } from "date-fns"
 import { CalendarIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -48,6 +48,8 @@ export function BookingForm() {
       phone: "",
       company: "",
       message: "",
+      date: undefined,
+      time: "",
     },
   })
 
@@ -60,8 +62,9 @@ export function BookingForm() {
     setIsSubmitting(false)
 
     toast("Booking confirmed!", {
-        description: `Your consultation is scheduled for ${format(values.date, "PPP")} at ${values.time}. We've sent a confirmation to your email.`,
-      })
+      description: "Your consultation is scheduled...",
+    });
+    
 
     form.reset()
   }

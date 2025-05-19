@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Globe, Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,7 +25,14 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <Globe className="h-6 w-6 text-primary" />
+            <Image
+              src="/images/logo.png"
+              width={30}
+              height={30}
+              alt="Expandly Logo"
+              className="relative rounded-lg object-cover "
+              priority
+            />
             <span className="font-bold text-xl">Expandly</span>
           </Link>
         </div>

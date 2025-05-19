@@ -3,16 +3,58 @@ import { Check, HelpCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { AnimatedSection } from "@/components/animated-section"
+import { CTA } from "@/components/CTA"
+import { AnimatedBackground } from "@/components/animated-background"
 
 export const metadata = {
   title: "Pricing Plans | Affordable Web Development Solutions",
   description:
     "Explore our affordable pricing plans for web development services. From basic landing pages to full e-commerce solutions, we have options for businesses of all sizes.",
   openGraph: {
-    title: "Pricing Plans | GlobalWeb Agency",
+    title: "Pricing Plans | Expandly",
     description:
       "Explore our affordable pricing plans for web development services. From basic landing pages to full e-commerce solutions, we have options for businesses of all sizes.",
+    url: "https://expandly.site/pricing",
+    siteName: "Expandly",
+    images: [
+      {
+        url: "https://expandly.site/images/assets/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Expandly — From Local to Global",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing Plans | Expandly",
+    description:
+      "Explore our affordable pricing plans for web development services. From basic landing pages to full e-commerce solutions, we have options for businesses of all sizes.",
+    images: ["https://expandly.site/images/assets/og-image.png"],
+    creator: "@expandly",
+  },
+  keywords: [
+    "Expandly",
+    "web development",
+    "business website",
+    "digital strategy",
+    "global web agency",
+    "SMB websites",
+    "affordable websites",
+    "web development agency",
+    "expand business",
+    "make website",
+    "global expand",
+    "agency",
+    "pricing",
+    "affordable",
+    "cheap",
+    "quality",
+  ],
+  metadataBase: new URL("https://expandly.site"),
 }
 
 function FeatureItem({ feature, included = true, tooltip }: { feature: string; included?: boolean; tooltip?: string }) {
@@ -46,9 +88,10 @@ export default function PricingPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-100">
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <AnimatedBackground />
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <AnimatedSection className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Affordable Web Solutions</h1>
               <p className="max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -56,14 +99,14 @@ export default function PricingPage() {
                 quality.
               </p>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Pricing Plans */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <AnimatedSection className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {/* Basic Plan */}
             <Card className="flex flex-col border-2 border-gray-200 transition-all hover:border-primary/50 hover:shadow-md">
               <CardHeader>
@@ -234,91 +277,65 @@ export default function PricingPage() {
                 </Link>
               </CardFooter>
             </Card>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="w-full py-12 md:py-24 bg-gray-50">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <AnimatedSection className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter">Frequently Asked Questions</h2>
               <p className="max-w-[600px] text-gray-500 md:text-lg">Common questions about our pricing and services.</p>
             </div>
-          </div>
-          <div className="mx-auto max-w-3xl space-y-4 py-8">
-            <div className="rounded-lg border p-4">
+          </AnimatedSection>
+          <AnimatedSection className="mx-auto max-w-3xl space-y-4 py-8">
+            <AnimatedSection className="rounded-lg border p-4">
               <h3 className="text-lg font-bold">Are there any hidden costs?</h3>
               <p className="text-gray-500 mt-2">
                 No, our pricing is transparent. The price you see is what you pay. However, third-party services like
                 domain registration, hosting, premium plugins, or stock photos may incur additional costs, which we'll clearly
                 communicate before any purchase.
               </p>
-            </div>
-            <div className="rounded-lg border p-4">
+            </AnimatedSection>
+            <AnimatedSection className="rounded-lg border p-4">
               <h3 className="text-lg font-bold">Do you offer payment plans?</h3>
               <p className="text-gray-500 mt-2">
                 Yes, we offer flexible payment plans for all our packages. Typically, we require a 50% deposit to begin
                 work, with the remaining balance due upon completion. For larger projects, we can arrange
                 milestone-based payments.
               </p>
-            </div>
-            <div className="rounded-lg border p-4">
+            </AnimatedSection>
+            <AnimatedSection className="rounded-lg border p-4">
               <h3 className="text-lg font-bold">What's included in the support period?</h3>
               <p className="text-gray-500 mt-2">
                 During the support period, we'll address any bugs, make minor content updates, and provide guidance on
                 using your website. Major feature additions or redesigns are not included but can be arranged at
                 discounted rates for existing clients.
               </p>
-            </div>
-            <div className="rounded-lg border p-4">
+            </AnimatedSection>
+            <AnimatedSection className="rounded-lg border p-4">
               <h3 className="text-lg font-bold">How long does it take to build my website?</h3>
               <p className="text-gray-500 mt-2">
                 Timeframes vary by project complexity. Basic sites typically take 1-2 week, Intermediate 2-3 weeks,
                 Commercial 5-8 weeks, and E-commerce 6-10 weeks. Custom projects will have timelines established during
                 the consultation phase.
               </p>
-            </div>
-            <div className="rounded-lg border p-4">
+            </AnimatedSection>
+            <AnimatedSection className="rounded-lg border p-4">
               <h3 className="text-lg font-bold">Can I upgrade my plan later?</h3>
               <p className="text-gray-500 mt-2">
                 We've designed our packages to be scalable. You can start with a basic package and upgrade as your
                 business grows. We'll apply a portion of your initial investment toward the upgrade.
               </p>
-            </div>
-          </div>
+            </AnimatedSection>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-12 md:py-24 bg-primary text-white">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Not Sure Which Plan to Choose?
-              </h2>
-              <p className="max-w-[600px] text-primary-foreground md:text-xl">
-                Book a free consultation with our experts to discuss your specific needs and get a personalized
-                recommendation.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/book-call">
-                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-                  Book a Free Consultation
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-primary-foreground/10">
-                  Contact Our Team
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTA />
     </div>
   )
 }

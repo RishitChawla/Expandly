@@ -8,14 +8,14 @@ export function AnimatedBackground() {
   const { theme } = useTheme()
 
   useEffect(() => {
-    if (!theme || !canvasRef.current) return // Wait for the theme and canvas to be set
-    const canvas = canvasRef.current
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
     const ctx = canvas.getContext("2d")
-    if (!ctx) return // Early return if ctx is null
+    if (!ctx) return
 
     // Set canvas dimensions
     const resizeCanvas = () => {
-      if (!canvas) return
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight * 0.8 // 80% of viewport height
     }

@@ -1,20 +1,21 @@
 import Link from "next/link"
 import { Globe, Mail, MapPin, Phone } from "lucide-react"
+import { AnimatedSection } from "./animated-section"
 
 export function Footer() {
   return (
     <footer className="w-full border-t bg-background">
       <div className="container px-4 md:px-6 py-12 md:py-16">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <AnimatedSection className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Globe className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl">GlobalWeb</span>
+              <span className="font-bold text-xl">Expandly</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Helping small and medium businesses expand globally through innovative web solutions.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="https://twitter.com" className="text-muted-foreground hover:text-primary" aria-label="Twitter">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +86,7 @@ export function Footer() {
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="space-y-4">
             <h3 className="text-base font-medium">Quick Links</h3>
@@ -110,19 +111,19 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-base font-medium">Services</h3>
             <nav className="flex flex-col space-y-2">
-              <Link href="/#" className="text-sm text-muted-foreground hover:text-primary">
+              <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
                 Web Development
               </Link>
-              <Link href="/#" className="text-sm text-muted-foreground hover:text-primary">
+              <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
                 E-commerce Solutions
               </Link>
-              <Link href="/#" className="text-sm text-muted-foreground hover:text-primary">
+              <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
                 SEO Optimization
               </Link>
-              <Link href="/#" className="text-sm text-muted-foreground hover:text-primary">
+              <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
                 International Marketing
               </Link>
-              <Link href="/#" className="text-sm text-muted-foreground hover:text-primary">
+              <Link href="/" className="text-sm text-muted-foreground hover:text-primary">
                 Multilingual Support
               </Link>
             </nav>
@@ -130,24 +131,24 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-base font-medium">Contact Us</h3>
             <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
                 <span>123 Web Street, Digital City, WD 12345</span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 99924-69408</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>info@globalwebagency.com</span>
+                <span>expandly.site@gmail.com</span>
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
         <div className="mt-12 border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} GlobalWeb Agency. All rights reserved.
+            © {new Date().getFullYear()} Expandly. All rights reserved.
           </p>
           <nav className="flex gap-4">
             <Link href="/privacy" className="text-xs text-muted-foreground hover:text-primary">

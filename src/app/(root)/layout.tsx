@@ -5,8 +5,10 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "@/components/globals.css"
+import { Toaster } from "sonner"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -26,42 +28,30 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              name: "GlobalWeb Agency",
-              image: "https://yourdomain.com/logo.png",
-              "@id": "https://yourdomain.com",
-              url: "https://yourdomain.com",
-              telephone: "+1-555-123-4567",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "123 Web Street",
-                addressLocality: "Digital City",
-                addressRegion: "WD",
-                postalCode: "12345",
-                addressCountry: "US",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 40.7128,
-                longitude: -74.006,
-              },
+              name: "Expandly",
+              image: "https://expandly.site/images/assets/og-image.png",
+              "@id": "https://expandly.site",
+              url: "https://expandly.site",
+              telephone: "+91 99924 69408",
               openingHoursSpecification: {
                 "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                 opens: "09:00",
                 closes: "17:00",
               },
-              sameAs: [
-                "https://www.facebook.com/globalwebagency",
-                "https://www.twitter.com/globalwebagency",
-                "https://www.linkedin.com/company/globalwebagency",
-                "https://www.instagram.com/globalwebagency",
-              ],
+              // sameAs: [
+              //   "https://www.facebook.com/expandly",
+              //   "https://www.twitter.com/expandly",
+              //   "https://www.linkedin.com/company/expandly",
+              //   "https://www.instagram.com/expandly",
+              // ],
             }),
           }}
         />
       </head>
       <body className={inter.className}>
           <div className="relative flex min-h-screen flex-col">
+            <Toaster />
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
