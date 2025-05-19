@@ -11,7 +11,6 @@ import { AnimatedBackground } from "@/components/animated-background"
 import { ArrowRight } from "lucide-react"
 import { CheckCircle } from "lucide-react"
 import Image from "next/image"
-import { HeroAnimation } from "@/components/hero-animation"
 
 import dynamic from 'next/dynamic'
 import { CTA } from "@/components/CTA"
